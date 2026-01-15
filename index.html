@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD. AL AMIN SOHAG | Official Verified Hub</title>
+    
+    <title>MD. AL AMIN SOHAG | International Author & Entrepreneur</title>
+    <meta name="description" content="MD. AL AMIN SOHAG - International Author of 'The Empress's Legacy', MD of Salsabilah Amin Electronics Ltd, and Founder of SR Electronics Park.">
+    <meta name="keywords" content="MD. AL AMIN SOHAG, Salsabilah Amin Electronics, The Empress's Legacy, SR Electronics Park, Salsabilah Amin Empires, Author Sohag">
+    <meta name="author" content="MD. AL AMIN SOHAG">
+    <link rel="canonical" href="https://salsabilah.com">
+
+    <meta property="og:title" content="MD. AL AMIN SOHAG | Official Verified Hub">
+    <meta property="og:description" content="Visionary Entrepreneur and International Author. Exploring the Legacy of Faith and Grit.">
+    <meta property="og:url" content="https://sohag.github.io">
+    <meta property="og:type" content="website">
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -13,46 +24,53 @@
             --gr-brown: #382110; --primary: #1e3c72; --accent: #e67e22;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; color: #1c1e21; margin: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; color: #1c1e21; margin: 0; line-height: 1.6; }
 
         header { 
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-            color: white; padding: 50px 20px; text-align: center;
+            color: white; padding: 60px 20px; text-align: center;
             border-bottom: 5px solid var(--accent);
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         .profile-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
         .profile-img { 
-            width: 110px; height: 110px; border-radius: 50%; 
-            border: 3px solid #fff; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            width: 120px; height: 120px; border-radius: 50%; 
+            border: 4px solid #fff; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.4s ease;
         }
+        .profile-img:hover { transform: scale(1.1); }
 
         .verified-badge {
-            background: #e7f3ff; color: #1877f2; padding: 6px 15px;
-            border-radius: 20px; display: inline-flex; align-items: center; gap: 5px;
-            font-weight: bold; font-size: 0.85rem; margin-top: 10px;
+            background: #e7f3ff; color: #1877f2; padding: 8px 18px;
+            border-radius: 50px; display: inline-flex; align-items: center; gap: 8px;
+            font-weight: bold; font-size: 0.9rem; margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .container { max-width: 600px; margin: 30px auto; padding: 0 15px; }
+        .container { max-width: 650px; margin: 30px auto; padding: 0 20px; }
 
-        /* Chairman & Identity Card */
+        /* Status Cards */
         .info-card {
-            background: white; border-radius: 12px; padding: 20px;
-            margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-left: 6px solid var(--accent); text-align: left;
+            background: white; border-radius: 15px; padding: 25px;
+            margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-left: 8px solid var(--accent);
+            animation: slideUp 0.8s ease forwards;
         }
-        .info-card h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.1rem; }
-        .info-card p { margin: 5px 0; font-size: 0.95rem; line-height: 1.4; color: #4b5563; }
+        .info-card h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .info-card p { margin: 6px 0; font-size: 1rem; color: #4b5563; }
 
+        /* Official Branded Buttons */
         .btn-brand {
-            display: flex; align-items: center; padding: 12px 20px;
-            border-radius: 10px; text-decoration: none; color: white;
+            display: flex; align-items: center; padding: 15px 25px;
+            border-radius: 12px; text-decoration: none; color: white;
             font-weight: 600; margin-bottom: 15px; transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
         }
-        .btn-brand i { font-size: 1.5rem; margin-right: 15px; width: 30px; text-align: center; }
-        .btn-brand span { flex-grow: 1; }
-        .btn-brand:after { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; opacity: 0.7; }
+        .btn-brand i { font-size: 1.6rem; margin-right: 15px; width: 35px; text-align: center; }
+        .btn-brand span { flex-grow: 1; font-size: 1.05rem; }
+        .btn-brand:after { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; opacity: 0.8; font-size: 1.1rem; }
 
         .fb-btn { background-color: var(--fb-blue); }
         .li-btn { background-color: var(--li-blue); }
@@ -61,10 +79,20 @@
         .store-btn { background-color: var(--accent); }
         .author-btn { background-color: #8e44ad; }
 
-        .btn-brand:hover { transform: scale(1.02); filter: brightness(1.1); }
-        .section-title { font-size: 0.85rem; font-weight: bold; color: #65676b; text-transform: uppercase; margin: 20px 0 10px 5px; display: block; }
+        .btn-brand:hover { transform: translateY(-3px); filter: brightness(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 
-        footer { text-align: center; padding: 40px 20px; color: #8a8d91; font-size: 0.85rem; background: #fff; border-top: 1px solid #ddd; }
+        .section-title { font-size: 0.85rem; font-weight: bold; color: #65676b; text-transform: uppercase; margin: 30px 0 12px 5px; letter-spacing: 1px; display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        footer { text-align: center; padding: 50px 20px; color: #64748b; font-size: 0.9rem; background: #fff; border-top: 1px solid #e5e7eb; margin-top: 50px; }
+
+        /* Mobile Friendly Adjustments */
+        @media (max-width: 480px) {
+            header { padding: 40px 15px; }
+            .profile-img { width: 100px; height: 100px; }
+        }
     </style>
 </head>
 <body>
@@ -74,8 +102,8 @@
         <img src="salsabilah.jpg" alt="Salsabilah Amin" class="profile-img">
         <img src="sohag.png" alt="MD. AL AMIN SOHAG" class="profile-img">
     </div>
-    <h2 style="margin: 0; font-size: 1.6rem;">MD. AL AMIN SOHAG</h2>
-    <p style="margin: 5px 0; font-size: 0.9rem; opacity: 0.9;">International Author | Entrepreneur | Web Developer</p>
+    <h1 style="margin: 0; font-size: 1.8rem; letter-spacing: 1px;">MD. AL AMIN SOHAG</h1>
+    <p style="margin: 10px 0; font-size: 1rem; opacity: 0.9; font-weight: 300;">International Author • Visionary Entrepreneur • Web Developer</p>
     <div class="verified-badge">
         <i class="fas fa-check-circle"></i> OFFICIAL VERIFIED ACCOUNT
     </div>
@@ -84,44 +112,43 @@
 <div class="container">
     
     <div class="info-card">
-        <h3><i class="fas fa-building"></i> Corporate Leadership</h3>
+        <h3><i class="fas fa-id-card"></i> Official Profile</h3>
+        <p><strong>Managing Director:</strong> Salsabilah Amin Electronics Ltd.</p>
         <p><strong>Chairman:</strong> Nahian Sultana Jui</p>
-        <p><strong>Managing Director:</strong> MD. AL AMIN SOHAG</p>
-        <p><strong>Company:</strong> Salsabilah Amin Electronics Limited</p>
-        <p><strong>Degree:</strong> Master's of English Literature</p>
+        <p><strong>Education:</strong> Master's of English Literature</p>
+        <p><strong>Works:</strong> Author of "The Empress's Legacy"</p>
     </div>
 
-    <span class="section-title">Business & Store</span>
+    <span class="section-title">Corporate & Business</span>
     <a href="https://salsabilahelectronics.com" target="_blank" class="btn-brand store-btn">
-        <i class="fas fa-shopping-cart"></i> <span>SR Electronics Online Store</span>
+        <i class="fas fa-shopping-bag"></i> <span>Salsabilah Amin Electronics Ltd.</span>
     </a>
     <a href="https://wa.me/8801711995940" target="_blank" class="btn-brand wa-btn">
-        <i class="fab fa-whatsapp"></i> <span>Official Business WhatsApp</span>
+        <i class="fab fa-whatsapp"></i> <span>Official WhatsApp Business</span>
     </a>
 
-    <span class="section-title">Literary Legacy</span>
+    <span class="section-title">Literary & Books</span>
     <a href="https://www.goodreads.com/author/show/54316654.MD_AL_AMIN_SOHAG" target="_blank" class="btn-brand gr-btn">
-        <i class="fab fa-goodreads"></i> <span>Goodreads Author Profile</span>
+        <i class="fab fa-goodreads"></i> <span>Goodreads Verified Author Profile</span>
     </a>
     <a href="https://salsabilah.com" target="_blank" class="btn-brand author-btn">
-        <i class="fas fa-book"></i> <span>Salsabilah Amin Empires</span>
+        <i class="fas fa-feather-alt"></i> <span>Salsabilah Amin Empires</span>
     </a>
 
-    <span class="section-title">Social Networks</span>
+    <span class="section-title">Global Networks</span>
     <a href="https://www.linkedin.com/in/md-al-amin-sohag" target="_blank" class="btn-brand li-btn">
-        <i class="fab fa-linkedin"></i> <span>LinkedIn Verified Profile</span>
+        <i class="fab fa-linkedin-in"></i> <span>LinkedIn Official Network</span>
     </a>
     <a href="https://www.facebook.com/alamin.sohag.79/" target="_blank" class="btn-brand fb-btn">
-        <i class="fab fa-facebook"></i> <span>Facebook Official Profile</span>
+        <i class="fab fa-facebook-f"></i> <span>Facebook Official Page</span>
     </a>
 
 </div>
 
 <footer>
     <p><strong>SR Electronics Park</strong><br>
-    Shah Super Market, Hat Boalia 7210<br>
-    Chuadanga, Bangladesh</p>
-    <p>© 2026 MD. AL AMIN SOHAG. All Rights Reserved.</p>
+    Shah Super Market, Hat Boalia, Chuadanga, Bangladesh</p>
+    <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">© 2026 MD. AL AMIN SOHAG. All Rights Reserved.</p>
 </footer>
 
 </body>
