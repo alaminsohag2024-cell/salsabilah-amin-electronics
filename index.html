@@ -3,55 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SALSABILAH EMPIRES | Sovereign Identity</title>
+    <title>SALSABILAH EMPIRES | Sovereign Global Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; --deep-black: #050505; --glass: rgba(255, 255, 255, 0.03); }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--deep-black); color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%); z-index: -1; }
         
-        /* Premium Background Effect */
-        body::before {
-            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
-            z-index: -1;
-        }
-
-        /* Hero Section */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
         .royal-logo { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 10vw, 5rem); color: var(--gold); letter-spacing: 15px; text-transform: uppercase; margin-bottom: 10px; animation: fadeInDown 1.5s ease-out; }
         .tagline { font-size: 1.1rem; letter-spacing: 5px; text-transform: uppercase; color: #888; margin-bottom: 40px; }
 
-        /* Legacy Statement - Your specific words for Salsabilah */
-        .legacy-banner { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.1); padding: 40px; backdrop-filter: blur(10px); max-width: 800px; margin: -50px auto 50px; border-radius: 2px; position: relative; }
+        .legacy-banner { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.1); padding: 45px; backdrop-filter: blur(15px); max-width: 850px; margin: -60px auto 50px; border-radius: 4px; text-align: center; }
         .legacy-text { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #fff; line-height: 1.6; }
         .legacy-text span { color: var(--gold); font-weight: bold; }
 
-        /* Card Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; padding: 100px 10%; }
-        .empire-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 50px; transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; }
-        .empire-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.02); transform: scale(1.02); }
-        .card-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 25px; }
-        .card-title { font-family: 'Cinzel', serif; font-size: 1.6rem; color: var(--gold); margin-bottom: 15px; }
-        .card-desc { font-size: 1rem; color: #bbb; line-height: 1.8; }
+        .empire-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 50px; transition: 0.5s; text-align: center; }
+        .empire-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.03); transform: translateY(-10px); }
+        .card-icon { font-size: 2.8rem; color: var(--gold); margin-bottom: 25px; }
+        .card-title { font-family: 'Cinzel', serif; font-size: 1.6rem; color: var(--gold); margin-bottom: 15px; letter-spacing: 2px; }
+        .card-desc { font-size: 1rem; color: #ccc; line-height: 1.8; }
 
-        /* Leadership Section */
-        .governance { padding: 100px 20px; text-align: center; background: rgba(212, 175, 55, 0.02); }
-        .role-label { text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; color: var(--gold); margin-bottom: 10px; }
-        .leader-name { font-family: 'Cinzel', serif; font-size: 2.2rem; color: #fff; margin-bottom: 40px; }
+        /* Google Tribute Section */
+        .google-appreciation { padding: 80px 20px; background: rgba(66, 133, 244, 0.02); border-top: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
+        .google-icon { font-size: 3rem; background: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+        .tribute-title { font-family: 'Cinzel', serif; color: #fff; letter-spacing: 4px; margin-bottom: 15px; font-size: 1.2rem; }
+        .tribute-desc { font-style: italic; color: #aaa; max-width: 700px; margin: 0 auto 30px; line-height: 1.7; }
+        .verify-btn { display: inline-block; padding: 12px 35px; border: 1px solid #4285F4; color: #4285F4; text-decoration: none; border-radius: 50px; transition: 0.4s; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+        .verify-btn:hover { background: #4285F4; color: #fff; box-shadow: 0 0 20px rgba(66, 133, 244, 0.3); }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .governance { padding: 100px 20px; text-align: center; background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.03)); }
+        .role-label { text-transform: uppercase; letter-spacing: 6px; font-size: 0.8rem; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+        .leader-name { font-family: 'Cinzel', serif; font-size: 2.5rem; color: #fff; margin-bottom: 50px; }
 
-        .btn-gold { display: inline-block; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; margin-top: 20px; transition: 0.4s; }
-        .btn-gold:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        .ambassador-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 50px; }
+        .brand-icon { text-align: center; transition: 0.5s; text-decoration: none; opacity: 0.8; }
+        .brand-icon i { font-size: 3.5rem; color: var(--gold); display: block; margin-bottom: 12px; }
+        .brand-name { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+        .brand-icon:hover { opacity: 1; transform: scale(1.1); }
+        .fb:hover i { color: #1877F2; } .ig:hover i { color: #E4405F; } .gr:hover i { color: #F4F1EA; }
 
-        footer { padding: 50px; font-size: 0.8rem; color: #444; letter-spacing: 2px; }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        footer { padding: 60px; text-align: center; font-size: 0.8rem; color: #555; letter-spacing: 3px; border-top: 1px solid rgba(212, 175, 55, 0.1); }
     </style>
 </head>
 <body>
@@ -59,8 +55,7 @@
     <section class="hero">
         <p class="tagline">The House of</p>
         <h1 class="royal-logo">Salsabilah Empires</h1>
-        <p class="tagline">Author | Entrepreneur | Visionary</p>
-        <a href="#explore" class="btn-gold">ENTER THE EMPIRE</a>
+        <p class="tagline">Strategic Analyst | International Author | Visionary</p>
     </section>
 
     <div class="legacy-banner">
@@ -69,37 +64,64 @@
         </p>
     </div>
 
-    <section id="explore" class="grid">
+    <section class="grid">
         <div class="empire-card">
             <i class="fas fa-feather-pointed card-icon"></i>
             <h3 class="card-title">Literary Mastery</h3>
-            <p class="card-desc">As an International Author and Master's in Literature, <b>MD. AL AMIN SOHAG</b> crafts worlds through words, blending philosophy with faith.</p>
+            <p class="card-desc">As a Master of English Literature, <b>MD. AL AMIN SOHAG</b> explores the depth of faith and human resilience through his writing.</p>
         </div>
-
         <div class="empire-card">
             <i class="fas fa-bolt-lightning card-icon"></i>
             <h3 class="card-title">Tech Innovation</h3>
-            <p class="card-desc">Managing <b>SR Electronics Park</b> & <b>Salsabilah Amin Electronics Ltd.</b>—where strategic business meets cutting-edge hardware solutions.</p>
+            <p class="card-desc">Directing <b>SR Electronics Park</b>—redefining hardware solutions with strategic digital integration.</p>
         </div>
-
         <div class="empire-card">
             <i class="fas fa-gem card-icon"></i>
             <h3 class="card-title">The Sovereign Vision</h3>
-            <p class="card-desc">An empire built on the foundation of <b>Digit Theory</b> and the <b>Sohag Filter</b>. Every code, every book, a legacy for the future.</p>
+            <p class="card-desc">A legacy built on <b>Digit Theory</b>. Every venture is dedicated to the bright future of Salsabilah Amin.</p>
         </div>
+    </section>
+
+    <section class="google-appreciation">
+        <i class="fab fa-google google-icon"></i>
+        <h3 class="tribute-title">A Tribute to Innovation</h3>
+        <p class="tribute-desc">
+            "We extend our sincere gratitude to <b>Google</b>. Our global reach and digital visibility are a testament to the platform that empowers visionary entrepreneurs and authors to connect with the world."
+        </p>
+        <a href="https://www.google.com/search?q=SR+Electronics+Park+Salsabilah+Amin+Empires" target="_blank" class="verify-btn">
+            Find Us on Google Search
+        </a>
     </section>
 
     <section class="governance">
         <p class="role-label">Honorable Chairman</p>
         <h2 class="leader-name">NAHIAN SULTANA JUI</h2>
-        
         <p class="role-label">Founder & Managing Director</p>
         <h2 class="leader-name">MD. AL AMIN SOHAG</h2>
+        
+        <div class="ambassador-grid">
+            <a href="https://www.facebook.com/SalsabilahEmpires" target="_blank" class="brand-icon fb">
+                <i class="fab fa-facebook"></i>
+                <span class="brand-name">Facebook Author</span>
+            </a>
+            <a href="https://www.instagram.com/SalsabilahEmpires" target="_blank" class="brand-icon ig">
+                <i class="fab fa-instagram"></i>
+                <span class="brand-name">IG Strategist</span>
+            </a>
+            <a href="https://www.goodreads.com/author/show/MD_AL_AMIN_SOHAG" target="_blank" class="brand-icon gr">
+                <i class="fab fa-goodreads"></i>
+                <span class="brand-name">Goodreads Author</span>
+            </a>
+            <a href="mailto:salsabilah.amin.empires@gmail.com" class="brand-icon mail">
+                <i class="fas fa-envelope-open-text"></i>
+                <span class="brand-name">Corporate Mail</span>
+            </a>
+        </div>
     </section>
 
-    <footer style="text-align: center;">
+    <footer>
         <p>EST. 2026 | SALSABILAH AMIN EMPIRES LIMITED</p>
-        <p style="margin-top: 10px;">Strategic Correspondence: <a href="mailto:salsabilah.amin.empires@gmail.com" style="color: var(--gold); text-decoration: none;">salsabilah.amin.empires@gmail.com</a></p>
+        <p style="margin-top: 15px;">POWERED BY FAITH, GRIT & GOOGLE INNOVATION</p>
     </footer>
 
 </body>
