@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SALSABILAH AMIN EMPIRES | Admin ERP</title>
+    <title>SR Electronics Park | Admin ERP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --sidebar-bg: #0f172a; --gold: #D4AF37; --bg: #f8fafc; --text: #334155; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg); display: flex; height: 100vh; color: var(--text); }
+        :root { 
+            --sidebar-bg: #0f172a; 
+            --gold: #D4AF37; 
+            --bg: #f8fafc; 
+            --text: #334155; 
+            --white: #ffffff;
+        }
 
-        /* Sidebar */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); display: flex; height: 100vh; color: var(--text); overflow: hidden; }
+
+        /* Sidebar Section */
         .sidebar { width: 280px; background: var(--sidebar-bg); color: #fff; display: flex; flex-direction: column; }
         .sidebar-header { padding: 30px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .sidebar-header h2 { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* Profile in Sidebar */
         .admin-profile { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .admin-img { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 10px; }
-        .profile-name { font-size: 0.9rem; color: var(--gold); font-weight: bold; }
+        .profile-name { font-size: 0.9rem; color: var(--gold); font-weight: bold; display: block; }
 
         .nav-links { flex: 1; padding: 20px 0; }
         .nav-link { padding: 15px 30px; text-decoration: none; color: #94a3b8; display: flex; align-items: center; transition: 0.3s; }
@@ -27,36 +33,103 @@
 
         /* Main Content */
         .main { flex: 1; overflow-y: auto; padding: 40px; }
-        .card { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 20px; color: var(--sidebar-bg); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--gold); }
+        .stat-card h4 { font-size: 0.8rem; color: #64748b; }
+        .stat-card p { font-size: 1.5rem; font-weight: bold; color: var(--sidebar-bg); }
+
+        /* Forms & Tables - Corrected Typos (tablo, vidth, position) */
+        .card { background: var(--white); border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .card h3 { margin-bottom: 20px; color: var(--sidebar-bg); border-bottom: 2px solid var(--gold); display: inline-block; }
 
         .grid-input { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px; }
-        label { font-size: 0.8rem; font-weight: 700; color: #64748b; margin-bottom: 8px; display: block; }
-        input, select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: 0.3s; }
-        input:focus { border-color: var(--gold); }
+        input, select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; }
+        
+        .btn { padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; background: var(--sidebar-bg); color: var(--gold); border: 1px solid var(--gold); }
+        .btn:hover { background: var(--gold); color: #000; }
 
-        .btn { padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .btn-gold { background: var(--sidebar-bg); color: var(--gold); border: 1px solid var(--gold); }
-        .btn-gold:hover { background: var(--gold); color: #000; }
-
-        /* Table Style - Fixed Typos */
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th { background: #f1f5f9; padding: 12px; text-align: left; font-size: 0.85rem; color: #64748b; border-bottom: 2px solid #e2e8f0; }
         td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
 
-        /* Print Area (A4 Invoice) - Fixed Typos */
+        /* Print Invoice Area - Fixed Typos */
         #invoice-print-area { display: none; }
 
         @media print {
             body * { visibility: hidden; }
             #invoice-print-area, #invoice-print-area * { visibility: visible; }
-            #invoice-print-area {
-                position: absolute; left: 0; top: 0; width: 210mm; padding: 20mm; background: #fff;
-                display: block !important; color: #000;
-            }
+            #invoice-print-area { position: absolute; left: 0; top: 0; width: 210mm; padding: 20mm; background: #fff; display: block !important; }
         }
     </style>
 </head>
 <body>
-    </body>
+
+    <div class="sidebar">
+        <div class="sidebar-header"><h2>SR Electronics</h2></div>
+        <div class="admin-profile">
+            <img src="https://via.placeholder.com/80" class="admin-img" alt="Sohag">
+            <span class="profile-name">MD AL AMIN SOHAG</span>
+            <small style="color: #94a3b8;">Managing Director</small>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="nav-link active"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="#" class="nav-link"><i class="fas fa-boxes"></i> Inventory</a>
+            <a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> Billing</a>
+            <a href="#" class="nav-link"><i class="fas fa-users"></i> Staff</a>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="header-top">
+            <h1>Admin ERP | Salsabilah Empires</h1>
+            <button class="btn" onclick="window.print()"><i class="fas fa-print"></i> Generate Report</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card"><h4>Daily Sales</h4><p>৳ 0.00</p></div>
+            <div class="stat-card"><h4>Stock Value</h4><p>৳ 0.00</p></div>
+            <div class="stat-card"><h4>Due Amount</h4><p>৳ 0.00</p></div>
+        </div>
+
+        <div class="card">
+            <h3>Add Inventory</h3>
+            <div class="grid-input">
+                <input type="text" placeholder="Product Name">
+                <input type="number" placeholder="Quantity">
+                <input type="number" placeholder="Price">
+                <button class="btn">Add Item</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-01-23</td>
+                        <td>Refrigerator Model-S</td>
+                        <td>5</td>
+                        <td>৳ 45,000</td>
+                        <td><span style="color: green;">In Stock</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="invoice-print-area">
+        <center>
+            <h2>SALSABILAH AMIN EMPIRES</h2>
+            <p>SR Electronics Park Official Report</p>
+        </center>
+    </div>
+
+</body>
 </html>
