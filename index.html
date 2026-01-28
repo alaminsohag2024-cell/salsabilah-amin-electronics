@@ -12,6 +12,7 @@
             --dark-bg: #000810; 
             --card-bg: rgba(255, 255, 255, 0.03); 
             --text-silver: #E0E0E0;
+            --alert-red: #8B0000;
         }
         
         body { 
@@ -76,6 +77,15 @@
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
 
+        /* Update Box Styling */
+        .notice-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--gold);
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
         /* Buttons */
         .btn-box { margin-top: 30px; }
         .btn-gold { 
@@ -117,17 +127,22 @@
 <body>
 
     <header>
-        <div style="border: 2px solid var(--gold); padding: 12px 35px; border-radius: 50px; margin-bottom: 25px; color: var(--gold); font-weight: bold; font-size: 0.8rem; letter-spacing: 3px;">SR ELECTRONICS PARK | GLOBAL RESEARCH</div>
+        <div style="border: 2px solid var(--gold); padding: 12px 35px; border-radius: 50px; margin-bottom: 25px; color: var(--gold); font-weight: bold; font-size: 0.8rem; letter-spacing: 3px;">GLOBAL INDUSTRIAL LEGACY | RISING STAR OF ASIA (DW)</div>
         <h1 class="hero-title">SALSABILAH AMIN EMPIRES</h1>
         <p class="sub-title">INDUSTRIAL INTELLIGENCE • CRITICAL INFRASTRUCTURE • LEGACY</p>
         
         <div class="btn-box">
-            <a href="media.html" class="btn-gold">VIEW GLOBAL REPORTS</a>
+            <a href="media.html" class="btn-gold">STRATEGIC BRIEFING 2026</a>
             <a href="books.html" class="btn-outline">OFFICIAL BOOKSHELF</a>
         </div>
     </header>
 
     <div class="container">
+        <div style="margin-bottom: 80px; padding: 20px; border-left: 4px solid var(--gold); background: rgba(255,255,255,0.02); text-align: left;">
+            <h2 style="color: var(--gold); letter-spacing: 3px;">GLOBAL AUTHORITY & RESEARCH</h2>
+            <p style="text-transform: none; color: #bbb; line-height: 1.6;">MD. AL AMIN SOHAG IS A GOODREADS VERIFIED AUTHOR AND A GLOBAL TECHNOCRAT RECOGNIZED AS THE <strong>'RISING STAR OF ASIA' BY DEUTSCHE WELLE (DW)</strong>. CURRENTLY SYNERGIZING INDUSTRIAL RESILIENCE FRAMEWORKS ACROSS 19 NATIONS.</p>
+        </div>
+
         <h2 style="color: var(--gold); margin-bottom: 60px; letter-spacing: 5px; font-size: 1.8rem;">GOVERNANCE & LEADERSHIP</h2>
         <div class="grid">
             <div class="card">
@@ -148,6 +163,15 @@
                 <p style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">THE LEGACY</p>
                 <p style="font-size: 0.75rem; text-transform: none; color: #888;">The eternal inspiration behind the industrial foundation.</p>
             </div>
+        </div>
+
+        <div class="notice-box">
+            <h3 style="color: var(--gold); letter-spacing: 2px;"><i class="fas fa-gavel"></i> STRATEGIC IP NOTICE</h3>
+            <p style="font-size: 0.8rem; text-transform: none; color: #ccc; line-height: 1.6;">
+                THE PROPRIETARY FRAMEWORKS INCLUDING <strong>'DIGIT THEORY'</strong> AND <strong>'SOHAG FILTER'</strong> ARE THE EXCLUSIVE INTELLECTUAL PROPERTY OF MD. AL AMIN SOHAG. ANY UNAUTHORIZED REPLICATION OR COMMERCIAL INTEGRATION (INCLUDING FINANCIAL PLATFORMS) IS STRICTLY PROHIBITED UNDER INTERNATIONAL IP LAW. 
+                <br><br>
+                <strong>MEDIA UPDATE:</strong> FORMAL BRIEFING SUBMITTED TO THE DAILY STAR AND PROTHOM ALO REGARDING THE PROTECTION OF CORE INDUSTRIAL RESEARCH ASSETS.
+            </p>
         </div>
     </div>
 
